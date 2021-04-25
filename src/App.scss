@@ -1,0 +1,66 @@
+@import './globals.scss';
+
+.App {
+    min-height: 100vh;
+    background-color: lightgray;
+
+    .countries-list-container {
+        display: grid;
+        justify-content: center;
+        padding: 100px 0;
+
+        .filters-and-sorting {
+            display: grid;
+            grid-template-columns: 1fr min-content;
+            grid-gap: 20px;
+            margin-bottom: 50px;
+
+            select {
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .filter-sorting-title {
+                margin: 0;
+            }
+
+            .filters {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 10px;
+
+                .filter-title {
+                    grid-column: -1 / 1;
+                }
+            }
+
+            .sorting-container {
+                justify-self: end;
+                .sorting-title {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .countries {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 50px;
+
+            @media (min-width: $md-screen-min) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media (min-width: $lg-screen-min) {
+                grid-template-columns: 1fr 1fr 1fr;
+                max-width: 1000px;
+            }
+
+            .empty-countries {
+                grid-column: -1 / 1;
+                width: 100%;
+            }
+        }
+    }
+}

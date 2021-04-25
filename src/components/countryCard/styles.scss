@@ -1,0 +1,42 @@
+.country-card {
+    display: grid;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(black, 0.3);
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 14px;
+
+    .country-name {
+        padding: 0 10px;
+        margin-bottom: 0;
+        font-size: 18px;
+    }
+
+    .country-flag {
+        background-color: lightgray;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding: 5px;
+
+        .country-flag-image {
+            width: 100%;
+            max-height: 200px;
+            height: auto;
+        }
+    }
+
+    .country-info {
+        display: grid;
+        padding: 0 10px 20px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+
+        .country-detail {
+            .country-detail-header {
+                margin: 0;
+            }
+        }
+    }
+}
